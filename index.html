@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh-Hant"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;生日祝福發送器 🎂&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="bg-gray-100 flex items-center justify-center min-h-screen"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1 class="text-2xl font-bold text-center mb-4"&gt;🎂 生日祝福發送器&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="user-info" class="text-center mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="name" class="text-lg font-semibold"&gt;王小明&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="birthday" class="text-gray-600"&gt;生日：2025-04-09&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="zodiac" class="text-gray-600"&gt;星座：白羊座 ♈️&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="flower" class="text-gray-600"&gt;花語：鬱金香 🌷&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="flex flex-col gap-3 mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button id="msg1" class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>🎉 生日快樂！願你像白羊座一樣勇敢無畏🔥！</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button id="msg2" class="py-2 px-4 bg-green-500 text-white rounded hover:bg-green-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>🎂 生日快樂！願你的笑容如鬱金香般燦爛🌷！</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a id="whatsappLink" href="#" target="_blank" class="block text-center py-2 px-4 bg-emerald-500 text-white rounded hover:bg-emerald-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>發送 WhatsApp</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// 假資料（可動態取）</p>
+<p class="p1">const phone = '85291234567'; // 你的電話號碼（替換）</p>
+<p class="p1">const birthday = '2025-04-09';</p>
+<p class="p2"><br></p>
+<p class="p1">// 自動計算星座</p>
+<p class="p1">function getZodiacSign(month, day) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const zodiacSigns = [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "水瓶座 ♒️", from: [1, 20], to: [2, 18] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "雙魚座 ♓️", from: [2, 19], to: [3, 20] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "白羊座 ♈️", from: [3, 21], to: [4, 19] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "金牛座 ♉️", from: [4, 20], to: [5, 20] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "雙子座 ♊️", from: [5, 21], to: [6, 20] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "巨蟹座 ♋️", from: [6, 21], to: [7, 22] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "獅子座 ♌️", from: [7, 23], to: [8, 22] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "處女座 ♍️", from: [8, 23], to: [9, 22] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "天秤座 ♎️", from: [9, 23], to: [10, 22] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "天蠍座 ♏️", from: [10, 23], to: [11, 21] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "射手座 ♐️", from: [11, 22], to: [12, 21] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ sign: "摩羯座 ♑️", from: [12, 22], to: [1, 19] }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for (const z of zodiacSigns) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if ((month === z.from[0] &amp;&amp; day &gt;= z.from[1]) || (month === z.to[0] &amp;&amp; day &lt;= z.to[1])) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return z.sign;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return "未知星座";</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// 自動對應花語</p>
+<p class="p1">function getFlowerLanguage(month) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const flowers = {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>1: "雪花蓮（希望）",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>2: "紫羅蘭（忠誠）",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>3: "水仙（新生）",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>4: "鬱金香（愛情）",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>5: "鈴蘭（幸福再臨）",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>6: "玫瑰（愛情與美）",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>7: "睡蓮（純潔）",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>8: "向日葵（光輝）",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>9: "矢車菊（優雅）",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>10: "金盞花（溫暖）",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>11: "菊花（高潔）",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>12: "水仙（希望）"</p>
+<p class="p1"><span class="Apple-converted-space">  </span>};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return flowers[month] || "未知花語";</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// 初始設定</p>
+<p class="p1">const dateParts = birthday.split("-");</p>
+<p class="p1">const month = parseInt(dateParts[1], 10);</p>
+<p class="p1">const day = parseInt(dateParts[2], 10);</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById('zodiac').innerText = `星座：${getZodiacSign(month, day)}`;</p>
+<p class="p1">document.getElementById('flower').innerText = `花語：${getFlowerLanguage(month)}`;</p>
+<p class="p2"><br></p>
+<p class="p1">let selectedMessage = '';</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById('msg1').addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>selectedMessage = this.textContent;</p>
+<p class="p1">});</p>
+<p class="p1">document.getElementById('msg2').addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>selectedMessage = this.textContent;</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById('whatsappLink').addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (selectedMessage) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const url = `https://wa.me/${phone}?text=${encodeURIComponent(selectedMessage)}`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>this.href = url;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>alert('請先選擇一個祝福語！');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">});</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
